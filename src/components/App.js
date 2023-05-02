@@ -1,7 +1,12 @@
 import Header from "./Header"
 import PetPage from "./PetPage"
+import {useState} from "react"
 
 function App() {
+
+  // Creating State - searchText is the stateful variable which is created and initialized with a value of ""
+  // setSearchText is the setter function which is used to update the value of searchText, the stateful variable
+  const [searchText, setSearchText] = useState("")
 
   const pets = [
     {
@@ -41,10 +46,17 @@ function App() {
     }
   ]
 
+  const filteredPets = pets.filter(pet => {
+    if(searchText === ""){
+      return true
+    }
+    return pet.name.toLowerCase().includes(searchText.toLowerCase())
+  })
+
   return (
     <div className="app">
       <Header />
-      <PetPage pets={pets} />
+      <PetPage pets={filteredPets} setSearchText={setSearchText}/>
     </div>
   );
 }
