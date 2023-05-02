@@ -1,5 +1,5 @@
 import Header from "./Header"
-import PetList from "./PetList"
+import PetPage from "./PetPage"
 
 function App() {
 
@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <PetList pets={pets} />
+      <PetPage pets={pets} />
     </div>
   );
 }

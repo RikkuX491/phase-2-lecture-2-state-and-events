@@ -8,7 +8,6 @@ function Pet({pet}){
             <button className="favorite-button">☆</button>
             )}
             <h4>{pet.name}</h4>
-            <button className="primary">Adopt</button>
         </li>
     )
 }
