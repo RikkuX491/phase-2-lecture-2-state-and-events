@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Today we'll continue to build our app for the pet adoption center, Flatapets, that displays a list of pets available for adoption at this pet adoption center. We will be adding a feature to this app that... We will be using the concepts learned in this lecture to build out this app.
+Today we'll continue to build our app for the pet adoption center, Flatapets, that displays a list of pets available for adoption at this pet adoption center. We will be adding a feature to this app that will allow the user to click the favorite button below the image of each pet to favorite it. We will also be adding a feature that will allow the user to search for pets by their name. We will be using the concepts learned in this lecture to build out these new features in this app.
 
 ## Setup
 
