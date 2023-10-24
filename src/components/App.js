@@ -6,8 +6,6 @@ function App() {
 
   const [searchText, setSearchText] = useState("")
 
-  // console.log(searchText)
-
   const pets = [
     {
         id: 1,
@@ -51,16 +49,8 @@ function App() {
       return true
     }
 
-    // if(pet.name.toLowerCase() === searchText.toLowerCase()){
-    //   return true
-    // }
-
-    // return false
-
     return pet.name.toLowerCase().includes(searchText.toLowerCase())
   })
-
-  // console.log(filteredPets)
 
   function updateSearchText(event){
     setSearchText(event.target.value)
