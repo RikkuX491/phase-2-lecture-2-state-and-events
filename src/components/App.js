@@ -1,7 +1,12 @@
 import Header from "./Header"
 import PetPage from "./PetPage"
+import {useState} from "react"
 
 function App() {
+
+  const [searchText, setSearchText] = useState("")
+
+  // console.log(searchText)
 
   const pets = [
     {
@@ -41,10 +46,30 @@ function App() {
     }
   ]
 
+  const filteredPets = pets.filter(pet => {
+    if(searchText === ""){
+      return true
+    }
+
+    // if(pet.name.toLowerCase() === searchText.toLowerCase()){
+    //   return true
+    // }
+
+    // return false
+
+    return pet.name.toLowerCase().includes(searchText.toLowerCase())
+  })
+
+  // console.log(filteredPets)
+
+  function updateSearchText(event){
+    setSearchText(event.target.value)
+  }
+
   return (
     <div className="app">
       <Header />
-      <PetPage pets={pets} />
+      <PetPage pets={filteredPets} updateSearchText={updateSearchText}/>
     </div>
   );
 }

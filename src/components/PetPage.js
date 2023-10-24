@@ -1,10 +1,10 @@
 import Search from "./Search"
 import PetList from "./PetList"
 
-function PetPage({pets}){
+function PetPage({pets, updateSearchText}){
     return(
         <main>
-            <Search />
+            <Search updateSearchText={updateSearchText} />
             <PetList pets={pets} />
         </main>
     )
